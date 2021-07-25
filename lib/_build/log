@@ -1,0 +1,6 @@
+# dune build
+# OCAMLPARAM: unset
+# Workspace root: /home/sato/repos/csisat_shrink/csisat/src
+$ /usr/bin/nproc > /tmp/dune67465b.output 2> /dev/null
+# Auto-detected concurrency: 4
+# disable binary cache
