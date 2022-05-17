@@ -1,0 +1,19 @@
+opam-version: "2.0"
+maintainer: "Ryosuke SATO <rsato@is.s.u-tokyo.ac.jp>"
+authors: [
+  "Dirk Beyer"
+  "Damien Zufferey"
+]
+homepage: "https://github.com/ryosu-sato/csisat"
+dev-repo: "git+https://github.com/ryosu-sato/csisat.git"
+bug-reports: "https://github.com/ryosu-sato/csisat/issues"
+license: "Apache License, Version 2.0"
+build: [
+  ["dune" "subst"]
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "conf-glpk"
+  "dune"
+]
+synopsis: "An open-source interpolating decision procedure for LA+EUF"
