@@ -151,7 +151,7 @@ let partial_interpolant a a_prop b b_prop (core, theory, eq_deduced) =
   Message.print Message.Debug (lazy("processing core: "^(print core)));
   let core_lst = match core with
     | And lst -> lst
-    | _ -> failwith "Interpolate, process_core: expected And"
+    | _ -> [core] (* failwith "Interpolate, process_core: expected And" *)
   in
   let (a_part, b_part) = match splitN_unsat_cores_set [a_prop;b_prop] core_lst with 
     | x::y::[] -> (x,y)
@@ -904,5 +904,3 @@ let interpolate_propositional_only a b =
         in
           simplify it
       end
-
-
